@@ -1,0 +1,7 @@
+# ninja log v5
+1	108	622401245	libiconv.out/CMakeFiles/libiconv.dir/libiconv/relocatable.c.o	8a52bdbfa6b57b4
+6	158	622401245	libiconv.out/CMakeFiles/libiconv.dir/libcharset/localcharset.c.o	1b5ac53ad2eead09
+9	889	622401246	CMakeFiles/iconv.dir/D_/project/vscode/neko/plugins/flutter_iconv/cxx/ffi.cpp.o	9b80468c60fb688f
+4	2593	622401247	libiconv.out/CMakeFiles/libiconv.dir/libiconv/iconv.c.o	4da5f95a3c07562a
+2595	2817	622401248	libiconv.out/liblibiconv.a	b982bb5db068c456
+2818	2983	622401248	D:/project/vscode/neko/plugins/flutter_iconv/example/build/flutter_iconv/intermediates/cmake/debug/obj/x86_64/libiconv.so	7d8baea4242d17e2

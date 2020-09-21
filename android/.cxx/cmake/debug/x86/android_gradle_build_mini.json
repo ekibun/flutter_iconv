@@ -1,0 +1,26 @@
+{
+  "buildFiles": [
+    "C:\\Users\\ekibun\\AppData\\Local\\Android\\Sdk\\ndk\\21.3.6528147\\build\\cmake\\platforms.cmake",
+    "C:\\Users\\ekibun\\AppData\\Local\\Android\\Sdk\\ndk\\21.3.6528147\\build\\cmake\\android.toolchain.cmake",
+    "D:\\project\\vscode\\neko\\plugins\\flutter_iconv\\cxx\\CMakeLists.txt",
+    "D:\\project\\vscode\\neko\\plugins\\flutter_iconv\\android\\src\\main\\cxx\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\ekibun\\AppData\\Local\\Android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\project\\vscode\\neko\\plugins\\flutter_iconv\\android\\.cxx\\cmake\\debug\\x86\" clean"
+  ],
+  "buildTargetsCommand": "C:\\Users\\ekibun\\AppData\\Local\\Android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\project\\vscode\\neko\\plugins\\flutter_iconv\\android\\.cxx\\cmake\\debug\\x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "iconv-Debug-x86": {
+      "artifactName": "iconv",
+      "buildCommand": "C:\\Users\\ekibun\\AppData\\Local\\Android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\project\\vscode\\neko\\plugins\\flutter_iconv\\android\\.cxx\\cmake\\debug\\x86\" iconv",
+      "abi": "x86",
+      "output": "D:\\project\\vscode\\neko\\plugins\\flutter_iconv\\example\\build\\flutter_iconv\\intermediates\\cmake\\debug\\obj\\x86\\libiconv.so"
+    },
+    "libiconv-Debug-x86": {
+      "artifactName": "libiconv",
+      "buildCommand": "C:\\Users\\ekibun\\AppData\\Local\\Android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\project\\vscode\\neko\\plugins\\flutter_iconv\\android\\.cxx\\cmake\\debug\\x86\" libiconv",
+      "abi": "x86",
+      "output": "D:\\project\\vscode\\neko\\plugins\\flutter_iconv\\android\\.cxx\\cmake\\debug\\x86\\libiconv.out\\liblibiconv.a"
+    }
+  }
+}

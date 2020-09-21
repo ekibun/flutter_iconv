@@ -1,0 +1,6 @@
+D:/project/vscode/neko/plugins/flutter_iconv/android/.cxx/cmake/debug/x86/CMakeFiles/iconv.dir
+D:/project/vscode/neko/plugins/flutter_iconv/android/.cxx/cmake/debug/x86/CMakeFiles/edit_cache.dir
+D:/project/vscode/neko/plugins/flutter_iconv/android/.cxx/cmake/debug/x86/CMakeFiles/rebuild_cache.dir
+D:/project/vscode/neko/plugins/flutter_iconv/android/.cxx/cmake/debug/x86/libiconv.out/CMakeFiles/libiconv.dir
+D:/project/vscode/neko/plugins/flutter_iconv/android/.cxx/cmake/debug/x86/libiconv.out/CMakeFiles/edit_cache.dir
+D:/project/vscode/neko/plugins/flutter_iconv/android/.cxx/cmake/debug/x86/libiconv.out/CMakeFiles/rebuild_cache.dir

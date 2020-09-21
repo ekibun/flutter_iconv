@@ -1,0 +1,7 @@
+Executable : C:\Users\ekibun\AppData\Local\Android\sdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+D:\project\vscode\neko\plugins\flutter_iconv\android\.cxx\cmake\debug\x86
+iconv
+jvmArgs : 
+
