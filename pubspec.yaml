@@ -1,7 +1,6 @@
 name: flutter_iconv
 description: This project is a iconv library for Flutter. Use this plugin with utf8codec.
 version: 0.0.1
-author: ekibun
 homepage: https://github.com/ekibun/flutter_iconv
 
 environment:
@@ -11,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  ffi: 0.1.3
+  ffi: ^0.1.3
 
 dev_dependencies:
   flutter_test:
