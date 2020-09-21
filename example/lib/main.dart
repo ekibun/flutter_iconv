@@ -3,18 +3,14 @@
  * @Author: ekibun
  * @Date: 2020-08-08 08:16:51
  * @LastEditors: ekibun
- * @LastEditTime: 2020-09-21 22:02:00
+ * @LastEditTime: 2020-09-21 22:47:10
  */
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'dart:typed_data';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_iconv/flutter_iconv.dart';
-import 'package:flutter_qjs/flutter_qjs.dart';
-
-import 'highlight.dart';
 
 void main() {
   runApp(MyApp());
@@ -48,45 +44,16 @@ class TestPage extends StatefulWidget {
 
 class _TestPageState extends State<TestPage> {
   String resp;
-  FlutterQjs engine;
 
-  CodeInputController _controller = CodeInputController(text: """
-  (()=>{
-    var src = channel("utf8enc", ["你好"]);
-    var dst = channel("convert", [src, "utf-8", "gbk", false]);
-    var dstsrc = channel("convert", [dst, "gbk", "utf-8", false]);
-    return channel("utf8dec", [dstsrc]);
-  })()
-  """);
-  _createEngine() async {
-    if (engine != null) return;
-    engine = FlutterQjs();
-    engine.setMethodHandler((String method, List arg) {
-      switch (method) {
-        case "convert":
-          return convert(arg[0], from: arg[1], to: arg[2], fatal: arg[3]);
-        case "utf8dec":
-          return utf8.decode(arg[0], allowMalformed: true);
-        case "utf8enc":
-          return utf8.encode(arg[0]);
-        default:
-          throw Exception("No such method");
-      }
-    });
-    engine.setModuleHandler((String module) {
-      if (module == "test") return "export default '${new DateTime.now()}'";
-      return "";
-      // return await rootBundle.loadString(
-      //     "js/" + module.replaceFirst(new RegExp(r".js$"), "") + ".js");
-    });
-    engine.dispatch();
-  }
+  TextEditingController _encoding = TextEditingController(text: "gbk");
+
+  TextEditingController _controller = TextEditingController(text: "你好");
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("JS engine test"),
+        title: Text("iconv test"),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
@@ -97,29 +64,22 @@ class _TestPageState extends State<TestPage> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  FlatButton(child: Text("create engine"), onPressed: _createEngine),
                   FlatButton(
-                      child: Text("evaluate"),
+                      child: Text("convert"),
                       onPressed: () async {
-                        if (engine == null) {
-                          print("please create engine first");
-                          return;
-                        }
                         try {
-                          resp =
-                              (await engine.evaluate(_controller.text ?? '', "<eval>")).toString();
+                          resp = convert(utf8.encode(_controller.text), to: _encoding.text).toString();
                         } catch (e) {
                           resp = e.toString();
                         }
                         setState(() {});
                       }),
-                  FlatButton(
-                      child: Text("close engine"),
-                      onPressed: () async {
-                        if (engine == null) return;
-                        await engine.close();
-                        engine = null;
-                      }),
+                  SizedBox(
+                      child: TextField(
+                        controller: _encoding,
+                        decoration: null,
+                      ),
+                      width: 100),
                 ],
               ),
             ),

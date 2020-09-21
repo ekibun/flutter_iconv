@@ -5,3 +5,5 @@
 5	2188	622401244	libiconv.out/CMakeFiles/libiconv.dir/libiconv/iconv.c.o	220a23d7ee9f06fe
 2189	2301	622401245	libiconv.out/liblibiconv.a	a4921208d30a1f1b
 2301	2460	622401245	D:/project/vscode/neko/plugins/flutter_iconv/example/build/flutter_iconv/intermediates/cmake/debug/obj/x86/libiconv.so	6e48d0a56561d958
+5	587	622403008	CMakeFiles/iconv.dir/D_/project/vscode/neko/plugins/flutter_iconv/cxx/ffi.cpp.o	a0d5f2bce2b71dcd
+587	696	622403008	D:/project/vscode/neko/plugins/flutter_iconv/example/build/flutter_iconv/intermediates/cmake/debug/obj/x86/libiconv.so	6e48d0a56561d958

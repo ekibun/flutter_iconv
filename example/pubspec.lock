@@ -69,13 +69,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_highlight:
-    dependency: "direct main"
-    description:
-      name: flutter_highlight
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.6.0"
   flutter_iconv:
     dependency: "direct main"
     description:
@@ -83,25 +76,11 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
-  flutter_qjs:
-    dependency: "direct main"
-    description:
-      path: "../../flutter_qjs"
-      relative: true
-    source: path
-    version: "0.0.6"
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
-  highlight:
-    dependency: "direct main"
-    description:
-      name: highlight
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.6.0"
   matcher:
     dependency: transitive
     description:

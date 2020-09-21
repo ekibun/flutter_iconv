@@ -3,7 +3,7 @@
  * @Author: ekibun
  * @Date: 2020-09-21 19:53:44
  * @LastEditors: ekibun
- * @LastEditTime: 2020-09-21 22:20:25
+ * @LastEditTime: 2020-09-21 22:37:27
  */
 #include "iconv.hpp"
 
@@ -18,13 +18,19 @@ extern "C"
 {
   DLLEXPORT const char *convert(char *from, char *to, int32_t fatal, char *str)
   {
-
-    std::string output;
-    iconvpp::converter(from, to, !fatal).convert(std::string(str), output);
-    size_t len = output.size() + 1;
-    char *ret = new char[len];
-    strcpy_s(ret, len, output.c_str());
-    return ret;
+    try
+    {
+      std::string output;
+      iconvpp::converter(from, to, !fatal).convert(std::string(str), output);
+      size_t len = output.size() + 1;
+      char *ret = new char[len];
+      strcpy_s(ret, len, output.c_str());
+      return ret;
+    }
+    catch (std::runtime_error &)
+    {
+      return 0;
+    }
   }
 
   DLLEXPORT void freeChar(char *str)

@@ -3,7 +3,7 @@
  * @Author: ekibun
  * @Date: 2020-09-21 20:11:37
  * @LastEditors: ekibun
- * @LastEditTime: 2020-09-21 22:14:45
+ * @LastEditTime: 2020-09-21 22:38:44
  */
 import 'dart:ffi';
 
@@ -58,11 +58,12 @@ Uint8List convert(Uint8List str, {String from, String to, bool fatal}) {
   var utf8from = Utf8.toUtf8(from ?? "utf-8");
   var utf8to = Utf8.toUtf8(to ?? "utf-8");
   var retStr = _convert(utf8from, utf8to, fatal == true ? 1 : 0, ptr);
-  var length = Utf8.strlen(retStr);
-  var ret = Uint8List.fromList(retStr.cast<Uint8>().asTypedList(length));
   free(ptr);
   free(utf8from);
   free(utf8to);
+  if(retStr.address == 0) throw Exception("iconv failed");
+  var length = Utf8.strlen(retStr);
+  var ret = Uint8List.fromList(retStr.cast<Uint8>().asTypedList(length));
   _freeChar(retStr);
   return ret;
 }

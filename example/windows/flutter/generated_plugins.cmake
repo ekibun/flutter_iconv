@@ -4,7 +4,6 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   flutter_iconv
-  flutter_qjs
 )
 
 set(PLUGIN_BUNDLED_LIBRARIES)

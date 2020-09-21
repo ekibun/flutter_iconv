@@ -1,4 +1,3 @@
 ninja: Entering directory `D:\project\vscode\neko\plugins\flutter_iconv\android\.cxx\cmake\debug\armeabi-v7a'
-[1/3] Linking C static library libiconv.out\liblibiconv.a
-[2/3] Building CXX object CMakeFiles/iconv.dir/D_/project/vscode/neko/plugins/flutter_iconv/cxx/ffi.cpp.o
-[3/3] Linking CXX shared library D:\project\vscode\neko\plugins\flutter_iconv\example\build\flutter_iconv\intermediates\cmake\debug\obj\armeabi-v7a\libiconv.so
+[1/2] Building CXX object CMakeFiles/iconv.dir/D_/project/vscode/neko/plugins/flutter_iconv/cxx/ffi.cpp.o
+[2/2] Linking CXX shared library D:\project\vscode\neko\plugins\flutter_iconv\example\build\flutter_iconv\intermediates\cmake\debug\obj\armeabi-v7a\libiconv.so
