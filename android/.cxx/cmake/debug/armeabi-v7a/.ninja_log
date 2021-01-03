@@ -1,9 +1,0 @@
-# ninja log v5
-3	91	622401099	libiconv.out/CMakeFiles/libiconv.dir/libiconv/relocatable.c.o	8598464ab82c5313
-4	152	622401099	libiconv.out/CMakeFiles/libiconv.dir/libcharset/localcharset.c.o	6ece564a88909ab4
-6	2071	622401101	libiconv.out/CMakeFiles/libiconv.dir/libiconv/iconv.c.o	65def6bcc09644a2
-22	333	622401238	libiconv.out/liblibiconv.a	bdfb4c44595481f3
-9	1192	622401239	CMakeFiles/iconv.dir/D_/project/vscode/neko/plugins/flutter_iconv/cxx/ffi.cpp.o	8ae87fc705c8cd53
-1193	1340	622401239	D:/project/vscode/neko/plugins/flutter_iconv/example/build/flutter_iconv/intermediates/cmake/debug/obj/armeabi-v7a/libiconv.so	935e81f7f2996c7d
-35	1314	622403006	CMakeFiles/iconv.dir/D_/project/vscode/neko/plugins/flutter_iconv/cxx/ffi.cpp.o	8ae87fc705c8cd53
-1314	1489	622403006	D:/project/vscode/neko/plugins/flutter_iconv/example/build/flutter_iconv/intermediates/cmake/debug/obj/armeabi-v7a/libiconv.so	935e81f7f2996c7d

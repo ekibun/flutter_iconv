@@ -68,7 +68,9 @@ class _TestPageState extends State<TestPage> {
                       child: Text("convert"),
                       onPressed: () async {
                         try {
-                          resp = convert(utf8.encode(_controller.text), to: _encoding.text).toString();
+                          resp = convert(utf8.encode(_controller.text),
+                                  to: _encoding.text)
+                              .toString();
                         } catch (e) {
                           resp = e.toString();
                         }

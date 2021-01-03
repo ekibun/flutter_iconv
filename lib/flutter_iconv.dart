@@ -61,7 +61,7 @@ Uint8List convert(Uint8List str, {String from, String to, bool fatal}) {
   free(ptr);
   free(utf8from);
   free(utf8to);
-  if(retStr.address == 0) throw Exception("iconv failed");
+  if (retStr.address == 0) throw Exception("iconv failed");
   var length = Utf8.strlen(retStr);
   var ret = Uint8List.fromList(retStr.cast<Uint8>().asTypedList(length));
   _freeChar(retStr);
