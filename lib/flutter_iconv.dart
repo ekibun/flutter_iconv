@@ -50,20 +50,19 @@ final void Function(
     )>>("freeChar")
     .asFunction();
 
-Uint8List convert(Uint8List str, {String from, String to, bool fatal}) {
-  var ptr = allocate<Uint8>(count: str.length + 1);
+Uint8List convert(List<int> str, {String? from, String? to, bool? fatal}) {
+  var ptr = malloc.allocate<Uint8>(str.length + 1);
   var byteList = ptr.asTypedList(str.length + 1);
   byteList.setAll(0, str);
   byteList[str.length] = 0;
-  var utf8from = Utf8.toUtf8(from ?? "utf-8");
-  var utf8to = Utf8.toUtf8(to ?? "utf-8");
+  var utf8from = (from ?? "utf-8").toNativeUtf8();
+  var utf8to = (to ?? "utf-8").toNativeUtf8();
   var retStr = _convert(utf8from, utf8to, fatal == true ? 1 : 0, ptr);
-  free(ptr);
-  free(utf8from);
-  free(utf8to);
+  malloc.free(ptr);
+  malloc.free(utf8from);
+  malloc.free(utf8to);
   if (retStr.address == 0) throw Exception("iconv failed");
-  var length = Utf8.strlen(retStr);
-  var ret = Uint8List.fromList(retStr.cast<Uint8>().asTypedList(length));
+  var ret = Uint8List.fromList(retStr.cast<Uint8>().asTypedList(retStr.length));
   _freeChar(retStr);
   return ret;
 }
